@@ -10,8 +10,10 @@ public class Main {
     private static void createAndShowWindow() {
         JFrame frame = new JFrame("Pattern Graphics");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        PatternPanel.initializeGameOfLife(400, 100, "B3/S234");
-        frame.add(new PatternPanel());
+        PatternPanel p = new PatternPanel();
+        p.initializeGameOfLife(400, 100, "B12/S234");
+        frame.add(p);
+        frame.setUndecorated(true);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
